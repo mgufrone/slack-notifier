@@ -50,9 +50,8 @@ spec:
                 description: 'Status contains list of pod status to watch. default:
                   OOMKilled, ImagePullBackoff, CrashLoopBackOff'
                 items:
-                  description: |-
-                    EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
-                    NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
+                  description: Status is the available status the controller manager
+                    would observer the current pod status
                   type: string
                 type: array
             required:
