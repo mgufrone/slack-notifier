@@ -1,10 +1,13 @@
 # slack-notifier
-// TODO(user): Add simple overview of use/purpose
 
 ## Description
-// TODO(user): An in-depth paragraph about your project and overview of use
+This repository contains a Kubernetes pod observer tool that monitors the status of pods in a cluster and sends
+notifications to a Slack workspace whenever a pod is not in the expected state. It includes features for deployment via
+YAML bundles or Helm Charts and integrates seamlessly with Kubernetes and Slack for real-time alerts.
 
 ## Getting Started
+
+[![asciicast](https://asciinema.org/a/tfVISQeSt9KF587BG46gc0Gyr.svg)](https://asciinema.org/a/0afdbe1f-005c-4707-860b-40f3fd20245e)
 
 ### Prerequisites
 - go version v1.23.0+
