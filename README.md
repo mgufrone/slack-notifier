@@ -9,6 +9,8 @@ YAML bundles or Helm Charts and integrates seamlessly with Kubernetes and Slack 
 
 [![asciicast](https://asciinema.org/a/tfVISQeSt9KF587BG46gc0Gyr.svg)](https://asciinema.org/a/0afdbe1f-005c-4707-860b-40f3fd20245e)
 
+![Preview](screenshots/in-action.png)
+
 ### Prerequisites
 - go version v1.23.0+
 - docker version 17.03+.
@@ -49,7 +51,7 @@ make deploy IMG=<some-registry>/slack-notifier:tag
 ```
 
 > **NOTE**: If you encounter RBAC errors, you may need to grant yourself cluster-admin
-privileges or be logged in as admin.
+> privileges or be logged in as admin.
 
 **Create instances of your solution**
 You can apply the samples (examples) from the config/sample:
