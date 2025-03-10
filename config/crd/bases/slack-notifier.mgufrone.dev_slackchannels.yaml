@@ -1,0 +1,68 @@
+---
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.17.2
+  name: slackchannels.slack-notifier.mgufrone.dev
+spec:
+  group: slack-notifier.mgufrone.dev
+  names:
+    kind: SlackChannel
+    listKind: SlackChannelList
+    plural: slackchannels
+    singular: slackchannel
+  scope: Namespaced
+  versions:
+  - name: v1
+    schema:
+      openAPIV3Schema:
+        description: SlackChannel is the Schema for the slackchannels API.
+        properties:
+          apiVersion:
+            description: |-
+              APIVersion defines the versioned schema of this representation of an object.
+              Servers should convert recognized schemas to the latest internal value, and
+              may reject unrecognized values.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+            type: string
+          kind:
+            description: |-
+              Kind is a string value representing the REST resource this object represents.
+              Servers may infer this from the endpoint the client submits requests to.
+              Cannot be updated.
+              In CamelCase.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: SlackChannelSpec defines the desired state of SlackChannel.
+            properties:
+              channel:
+                description: Channel will be for the notification to send to
+                type: string
+              isNamespaceScoped:
+                description: WatchAllNamespace would limit SlackChannel to only watch
+                  all pods within the same namespace. default Failed, Pending, Unknown
+                type: boolean
+              status:
+                description: 'Status contains list of pod status to watch. default:
+                  OOMKilled, ImagePullBackoff, CrashLoopBackOff'
+                items:
+                  description: |-
+                    EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
+                    NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
+                  type: string
+                type: array
+            required:
+            - channel
+            type: object
+          status:
+            description: SlackChannelStatus defines the observed state of SlackChannel.
+            type: object
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}

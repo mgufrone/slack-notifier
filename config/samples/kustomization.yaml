@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- slack-notifier_v1_slackchannel.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples

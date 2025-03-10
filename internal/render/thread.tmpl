@@ -1,0 +1,6 @@
+:warning: `{{.Pod.Name}}` {{- if .Owner }}(`{{ printf "%s/%s" .Owner.Kind .Owner.Name}}`){{- end }} in `{{.Pod.Namespace}}` is *{{.Status}}*
+
+Root Cause:
+```
+{{ .Reason }}
+```

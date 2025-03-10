@@ -1,0 +1,10 @@
+apiVersion: slack-notifier.mgufrone.dev/v1
+kind: SlackChannel
+metadata:
+  labels:
+    app.kubernetes.io/name: slack-notifier
+    app.kubernetes.io/managed-by: kustomize
+  name: slackchannel-sample
+spec:
+  channel: "#general"
+  isNamespaceScoped: true
